@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Número secreto</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container__conteudo">
+            <div class="container__informacoes">
+                <div class="container__texto">
+                    <h1></h1>
+                    <p class="texto__paragrafo"></p>
+                    <select id="range-selector" class="container__input" onchange="alterarIntervalo(this.value)">
+                        <option value="10">1 e 10</option>
+                        <option value="100" selected>1 e 100</option>
+                        <option value="500">1 e 500</option>
+                        <option value="1000">1 e 1000</option>
+                        <option value="5000">1 e 5000</option>
+                        <option value="10000">1 e 10000</option>
+                    </select>
+                </div>
+                <input type="number" min="1" max="100" class="container__input" required>
+                <div class="chute container__botoes">
+                    <button onclick="verificarChute()" class="container__botao">Chutar</button>
+                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled>Novo jogo</button>
+                </div>
+            </div>
+            <img src="./img/inicio.png" alt="Imagem do jogo" id="imagem__jogo" class="container__imagem-pessoa" />
+        </div>
+    </div>
+    
+    <div id="modal__acerto" class="modal">
+        <div class="modal__conteudo">
+            <span class="close__button" onclick="fecharModal()">&times;</span>
+            <h2>Parabéns!</h2>
+            <p>Você acertou o número secreto!</p>
+            <p id="mensagem-tentativa"></p>
+            <button onclick="reiniciarJogo(); fecharModal();">Jogar Novamente</button>
+        </div>
+    </div>
+    
+    <script src="app.js" defer></script>
+</body>
+
+</html>
