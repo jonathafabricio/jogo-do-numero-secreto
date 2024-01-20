@@ -196,25 +196,6 @@ button:disabled {
     transform: translate(-50%, -50%);
 }
 
-#mensagem-tentativa {
-    margin-top: 8px;
-}
-
-.close__button {
-    color: #ffffff;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close__button:hover,
-.close__button:focus {
-    color: #ffd700;
-    cursor: pointer;
-}
-
 .modal__conteudo button {
     background-color: #ffffff;
     color: #333;
@@ -234,6 +215,25 @@ button:disabled {
     background-color: #f8f8f8;
     color: #1a1a1a;
     border-color: #1a1a1a;
+}
+
+#mensagem-tentativa {
+    margin-top: 8px;
+}
+
+.close__button {
+    color: #ffffff;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close__button:hover,
+.close__button:focus {
+    color: #ffd700;
+    cursor: pointer;
 }
 
 @keyframes shake-horizontal {
@@ -266,6 +266,20 @@ button:disabled {
 #range-selector:disabled {
     cursor: not-allowed;
 }
+
+@keyframes colorChange {
+    0% { color: #FFD700; }
+    25% { color: #7FFFD4; }
+    50% { color: #FF69B4; }
+    75% { color: #98FB98; }
+    100% { color: #FFD700; }
+}
+
+.container__texto h1,
+.container__texto p {
+    animation: colorChange 10s infinite linear;
+}
+
 
 @media screen and (max-width: 1250px) {
     h1 {
