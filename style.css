@@ -190,7 +190,14 @@ button:disabled {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    position: relative;
+    position: fixed;
+    top: 35%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#mensagem-tentativa {
+    margin-top: 8px;
 }
 
 .close__button {

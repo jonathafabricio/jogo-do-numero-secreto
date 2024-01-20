@@ -49,7 +49,7 @@ function verificarChute() {
 
     if (chute === '') {
         alert('Por favor, insira um número para chutar.');
-        chuteInput.focus(); // Mantém o foco no campo de entrada
+        chuteInput.focus();
         return;
     }
 
@@ -64,8 +64,9 @@ function verificarChute() {
         mostrarModal();
 
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
-        let mensagemTentativa = `Você acertou com ${tentativas} ${palavraTentativa}`;
+        let mensagemTentativa = `Você acertou com ${tentativas} ${palavraTentativa}.`;
         exibirTextoNaTela('p', mensagemTentativa);
+        document.getElementById('mensagem-tentativa').innerText = mensagemTentativa;
         document.getElementById('reiniciar').removeAttribute('disabled');
 
     } else {
